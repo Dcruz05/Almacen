@@ -19,7 +19,6 @@ btnAgregar.addEventListener("click",(e)=>{
 //Boton para mostrar listado normal de productos
 const btnMostrar = document.getElementById("btnMostrar")
 btnMostrar.addEventListener("click", (e) => {
-    console.log(almacen.listado());
     document.getElementById("listado").innerHTML =`${almacen.listado()}`
     e.preventDefault();
 });
@@ -27,7 +26,6 @@ btnMostrar.addEventListener("click", (e) => {
 //Boton para mostrar listado invertido de productos
 const btnMostrarInvertido = document.getElementById("btnMostrarInvertido")
 btnMostrarInvertido.addEventListener("click", (e) => {
-    console.log(almacen.listadoInvesa());
     document.getElementById("listado").innerHTML =`${almacen.listadoInvesa()}`
     e.preventDefault();
 });
