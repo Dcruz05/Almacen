@@ -9,7 +9,7 @@ class Inventario{
 
     eliminar(codigo){
         if(this.buscar(codigo)==null){
-            alert("El producto que desea eliminar no existe")
+            return false;
         }
         else{
             for(let i=0;i<this.productos.length;i++){
@@ -20,7 +20,7 @@ class Inventario{
                 }
             }
             this.productos.pop()
-            alert("Se elimino el producto");
+            return true;
         }
     }
 
@@ -37,10 +37,10 @@ class Inventario{
         let lista = ""
         if(this.productos.length>0){
             for(let i=0;i<this.productos.length;i++){
-                lista += "<li>"+this.productos[i].info()+"</li>";
+                lista += this.productos[i].infoHtml();
             }
         }else{
-            lista = "No hay productos registrados"
+            lista = "<p>No hay productos registrados</p>"
         }
         
         return lista
@@ -50,10 +50,10 @@ class Inventario{
         let lista = ""
         if(this.productos.length>0){
             for(let i=this.productos.length-1;i>=0;i--){
-                lista += "<li>"+this.productos[i].info()+"</li>";
+                lista += this.productos[i].infoHtml();
             }
         }else{
-            lista = "No hay productos registrados"
+            lista = "<p>No hay productos registrados</p>"
         }
         return lista
     }

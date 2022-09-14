@@ -8,4 +8,8 @@ class Producto{
     info(){
         return `${this.codigo} - ${this.nombre} $${this.costo}`
     }
+    infoHtml(){
+        return `<div><h4>${this.codigo} - ${this.nombre}</h4>
+        <p>Cantidad : ${this.cantidad} - Precio $${this.costo}</p></div>`;
+    }
 }

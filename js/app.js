@@ -33,7 +33,9 @@ btnMostrarInvertido.addEventListener("click", (e) => {
 //Boton para eliminar un registro por codigo
 const btnEliminar = document.getElementById("btneliminar")
 btnEliminar.addEventListener("click", (e) => {
-    console.log(almacen.eliminar(document.getElementById("dltCodigo").value));
+    if(almacen.eliminar(document.getElementById("dltCodigo").value)==true){
+        alert("El Producto se elimino con exito")
+    }else alert("El producto que desea eliminar no existe");
     document.getElementById("listado").innerHTML =``
 
     e.preventDefault();
