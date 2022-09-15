@@ -38,5 +38,10 @@ btnEliminar.addEventListener("click", (e) => {
     }else alert("El producto que desea eliminar no existe");
     document.getElementById("listado").innerHTML =``
 
-    e.preventDefault();
 });
+
+const btnBuscar = document.getElementById("btnBuscar")
+btnBuscar.addEventListener("click", (e) => {
+    const producto = almacen.buscar(document.getElementById("schCodigo").value)
+    document.getElementById("listado").innerHTML = `${almacen.mostrarBusqueda(producto)}`
+})

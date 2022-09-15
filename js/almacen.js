@@ -33,6 +33,14 @@ class Inventario{
         return null;
     }
 
+    mostrarBusqueda(resultado){
+        if(resultado!=null){
+            return `${resultado.infoHtml()}`
+        }else{
+            return `El producto que desea buscar no existe`;
+        }
+    }
+
     listado(){
         let lista = ""
         if(this.productos.length>0){

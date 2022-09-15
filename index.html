@@ -30,8 +30,7 @@
                                 Precio <input type="number" step="0.10" id="precio" placeholder="precio del producto" class="form-control">
                             </div>
                             <input type="submit" value="Agregar" id="btnAgregar" class="btn btn-success btn-block">
-                            <button class="btn btn-primary btn-block" id="btnMostrar">Mostrar</button>
-                            <button class="btn btn-primary btn-block" id="btnMostrarInvertido">Mostrar Inverso</button>
+                            <input type="reset" class="btn btn-danger btn-block"></input>
                         </form>
                     </div>
                 </div>
@@ -47,12 +46,24 @@
                                         <div class="form-group">
                                             Codigo <input type="text" id="dltCodigo" placeholder="codigo del producto" class="form-control">
                                         </div>
-                                        <input type="submit" value="Eliminar" id="btneliminar" class="btn btn-success btn-block">
+                                        <input type="button" value="Eliminar" id="btneliminar" class="btn btn-success btn-block">
                                     </form>
                                 </div>
                             </div>
                             <div class="col-md-8">
-            
+                                <div class="card">
+                                    <div class="card-header d-flex justify-content-center">
+                                        <h3 class="d-flex justify-content-center">Buscar/Mostrar</h3>
+                                    </div>
+                                    <form id="formularioProducto" class="card-body">
+                                        <div class="form-group">
+                                            Codigo <input type="text" id="schCodigo" placeholder="codigo del producto" class="form-control">
+                                        </div>
+                                        <input type="button" value="Buscar" id="btnBuscar" class="btn btn-success btn-block">
+                                        <button class="btn btn-primary btn-block" id="btnMostrar">Listar registros</button>
+                                        <button class="btn btn-primary btn-block" id="btnMostrarInvertido">Listar registros inverso</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
